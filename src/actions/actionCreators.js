@@ -1,5 +1,6 @@
 import {
   CHANGE_SEARCH_FIELD,
+  EMPTY_SEARCH_FIELD,
   SEARCH_SKILLS_REQUEST,
   SEARCH_SKILLS_FAILURE,
   SEARCH_SKILLS_SUCCESS,
@@ -23,4 +24,8 @@ export const searchSkillsSuccess = (items) => ({
 export const changeSearchField = (search) => ({
   type: CHANGE_SEARCH_FIELD,
   payload: { search },
+});
+
+export const emptySearchField = () => ({
+  type: EMPTY_SEARCH_FIELD,
 });

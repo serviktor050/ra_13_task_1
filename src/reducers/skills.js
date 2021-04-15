@@ -3,6 +3,7 @@ import {
   SEARCH_SKILLS_FAILURE,
   SEARCH_SKILLS_SUCCESS,
   CHANGE_SEARCH_FIELD,
+  EMPTY_SEARCH_FIELD,
 } from "../actions/actionTypes";
 
 const initialState = {
@@ -40,6 +41,11 @@ export default function skillsReducer(state = initialState, action) {
       return {
         ...state,
         search,
+      };
+    case EMPTY_SEARCH_FIELD:
+      return {
+        items: [],
+        search: "",
       };
     default:
       return state;
